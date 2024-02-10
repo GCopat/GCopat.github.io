@@ -1,38 +1,71 @@
-body {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Patua+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Hammersmith One', sans-serif;
+
+    --clr-1: #202136;
+    --clr-2: #3C0753;
+    --clr-3: #720455;
+    --clr-4: #910A67;
+    --clr-5: #F7F8FC;
+
+    color: var(--clr-5);
 }
+body {
+    background-color: var(--clr-1);
+    gap: 5svh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-.navBar {
+header {
+    background-color: var(--clr-2);
+    box-shadow: rgba(0, 0, 0, 0.53) 0 5px 20px -10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+.navBar {
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: slategray;
-    height: 10svh;
-    border-radius: 20%;
-    margin-inline: 5svw;
-    box-shadow: rgba(0, 0, 0, 0.53) 0 5px 10px;
+    /*border-radius: 20px;*/
     overflow: hidden;
-    border: black 1px solid;
+    /*border: var(--clr-3) 1px solid;*/
+    font-size: 2em;
+    /*padding-inline: max(20svw, 5rem);*/
 }
 .nav-link {
     height: 100%;
-    width: 100%;
-
+    width: 10rem;
     display: flex;
     text-decoration: none;
-    color: black;
     justify-content: inherit;
     align-items: inherit;
     border: inherit;
+    font-size: 0.8em;
 }
 .nav-link:hover {
-    background-color: aliceblue;
+    background-color: var(--clr-3);
 
+}
+.title {
+    font-size: 3em;
+}
+.special {
+    /*width: 30%;*/
+    /*font-size: 1em;*/
+    /*padding-inline: 2svw;*/
 }
