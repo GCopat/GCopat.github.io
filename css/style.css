@@ -1,54 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Patua+One&display=swap');
+:root{
+    --theme-dark-1: #040622;
+    --theme-dark-2: #20215e;
+    /*--theme-dark-2: #3C0753;*/
+    /*--theme-dark-3: #720455;*/
+    --theme-dark-3: #b91630;
+    --theme-dark-4: #910A67;
+    --theme-dark-5: #F7F8FC;
 
+    --theme-light-1: #F7F8FC;
+    --theme-light-2: #910A67;
+    --theme-light-3: #720455;
+    --theme-light-4: #3C0753;
+    --theme-light-5: #202136;
+
+    color: var(--theme-dark-5);
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
     font-family: 'Hammersmith One', sans-serif;
-
-    /*--clr-1: #202136;*/
-    --clr-1: #000000;
-    /*--clr-2: #3C0753;*/
-    --clr-2: #191970;
-    --clr-3: #11114d;
-    /*--clr-3: #720455;*/
-    --clr-4: #910A67;
-    --clr-5: white;
-
-    color: var(--clr-5);
 }
+
 body {
-    background-color: var(--clr-1);
+    background-color: var(--theme-dark-1);
     gap: 5svh;
     display: flex;
     flex-direction: column;
-
+    height: 100svh;
 }
 
-
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*HEADER######################################################*/
 header {
-    background-color: var(--clr-2);
-    box-shadow: rgba(0, 0, 0, 0.53) 0 5px 20px -10px;
+    background-color: var(--theme-dark-2);
+    box-shadow: rgb(0, 0, 0) 0 5px 20px -10px;
     display: flex;
     justify-content: center;
+    overflow: visible;
+    height: 3em;
 }
+
 .navBar {
     height: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border-radius: 20px;*/
-    overflow: hidden;
-    /*border: var(--clr-3) 1px solid;*/
     font-size: 2em;
-    /*padding-inline: max(20svw, 5rem);*/
+}
+.nav-link:nth-child(2){
+
+
 }
 .nav-link {
     height: 100%;
@@ -59,16 +61,34 @@ header {
     align-items: inherit;
     border: inherit;
     font-size: 0.8em;
+    color: inherit;
+    cursor: pointer;
+    z-index: 1;
 }
 .nav-link:hover {
-    background-color: var(--clr-3);
+    background-color: var(--theme-dark-3);
 
 }
+
+/*MAIN#########################################################*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .title {
     font-size: 3em;
 }
-.special {
-    /*width: 30%;*/
-    /*font-size: 1em;*/
-    /*padding-inline: 2svw;*/
+
+.triangle {
+    height: 10em;
+    aspect-ratio: 1;
+    background-color: var(--theme-dark-2);
+    z-index: 10;
+    border-radius: 0 0 100% 0;
+    box-shadow: rgb(0, 0, 0) 0 5px 20px -10px
+}
+.tright {
+    border-radius: 0 0 0 100%;
 }
