@@ -7,11 +7,14 @@
 
     font-family: 'Hammersmith One', sans-serif;
 
-    --clr-1: #202136;
-    --clr-2: #3C0753;
-    --clr-3: #720455;
+    /*--clr-1: #202136;*/
+    --clr-1: #000000;
+    /*--clr-2: #3C0753;*/
+    --clr-2: #191970;
+    --clr-3: #11114d;
+    /*--clr-3: #720455;*/
     --clr-4: #910A67;
-    --clr-5: #F7F8FC;
+    --clr-5: white;
 
     color: var(--clr-5);
 }
