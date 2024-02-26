@@ -153,3 +153,20 @@ summary {
 details[open] span {
     transform: rotate(90deg);
 }
+
+button {
+    background-color: var(--theme-dark-3);
+    color: var(--theme-dark-5);
+    padding: 5px;
+    border: outset var(--theme-dark-3);
+    /*box-shadow: black 0 10px 10px 10px;*/
+    border-radius: 20px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.85);
+}
+button:active {
+    filter: brightness(80%);
+    transform: translateY(3px);
+    /*box-shadow: 0 1px #666;*/
+    /*background-color: #a43b0b;*/
+    /*border: outset #a43b0b;*/
+}
