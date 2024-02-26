@@ -116,9 +116,19 @@ document.querySelectorAll('details').forEach((el) => {
 });
 
 function openAll() {
-    document.body.querySelectorAll('summary')
+    document.body.querySelectorAll('details')
         .forEach((e) => {
-            e.click();
-            console.log(e);
+            if (!e.open) {
+                e.querySelector('summary').click();
+            }
         })
 }
+function closeAll() {
+    document.body.querySelectorAll('details')
+        .forEach((e) => {
+            if (e.open) {
+                e.querySelector('summary').click();
+            }
+        })
+}
+

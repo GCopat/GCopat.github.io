@@ -28,17 +28,22 @@
   <nav class="navBar">
       <a href="./index.html" class="nav-link special">Home</a>
       <a href="./index.html" class="nav-link">Projects</a>
-      <a href="./index.html" class="nav-link">Education</a>
+      <a href="./education.html" class="nav-link">Education</a>
   </nav>
 <!--  <div class="triangle tright"></div>-->
 </header>
 
 <main class="index">
-  <h1 class="title">Gabriel Pezzi Copat</h1>
-  <button onclick="openAll()">Expand/Collapse All</button>
+  <h1 class="title">Education</h1>
+  <div class="controls">
+    <ul id="control-list">
+      <li><button onclick="openAll()">Expand All</button></li>
+      <li><button onclick="closeAll()">Collapse All</button></li>
+    </ul>
+  </div>
   <article class="education">
     <section class="university">
-      <details class="uni-details">
+      <details open class="uni-details">
         <summary>
           <h1 class="degree-title"><span class="span-test">&#11166;</span> MSc Software Engineering</h1>
           <h2 class="degree-name">Cardiff University 2023-2024</h2>

@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Patua+One&display=swap');
 :root{
-    --theme-dark-1: #040622;
-    --theme-dark-2: #20215e;
-    /*--theme-dark-2: #3C0753;*/
-    /*--theme-dark-3: #720455;*/
-    --theme-dark-3: #EA520F;
-    /*--theme-dark-3: #b91630;*/
+
+    /*Dark/Gold*/
+    /*--theme-dark-1: #222831;*/
+    /*--theme-dark-2: #393E46;*/
+    /*--theme-dark-3: #FFD369;*/
+
+    --theme-dark-1: #232931;
+    --theme-dark-2: #393E46;
+    --theme-dark-3: #F05454;
+
+
+
+
     --theme-dark-4: #910A67;
     --theme-dark-5: #F7F8FC;
 
@@ -80,6 +87,8 @@ main {
 
 .title {
     font-size: 3em;
+    border-bottom: solid var(--theme-dark-3);
+    margin-bottom: 2svh;
 }
 
 .triangle {
@@ -155,10 +164,10 @@ details[open] span {
 }
 
 button {
-    background-color: var(--theme-dark-3);
+    background-color: var(--theme-dark-2);
     color: var(--theme-dark-5);
-    padding: 5px;
-    border: outset var(--theme-dark-3);
+    padding: 10px;
+    border: black var(--theme-dark-3);
     /*box-shadow: black 0 10px 10px 10px;*/
     border-radius: 20px;
     box-shadow: 0 3px rgba(0, 0, 0, 0.85);
@@ -169,4 +178,21 @@ button:active {
     /*box-shadow: 0 1px #666;*/
     /*background-color: #a43b0b;*/
     /*border: outset #a43b0b;*/
+}
+button:hover {
+    background-color: var(--theme-dark-3);
+}
+
+#control-list > li:nth-child(1) > button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#control-list > li:nth-child(2) > button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#control-list {
+    list-style: none;
+    display: flex;
 }
