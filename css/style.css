@@ -4,7 +4,8 @@
     --theme-dark-2: #20215e;
     /*--theme-dark-2: #3C0753;*/
     /*--theme-dark-3: #720455;*/
-    --theme-dark-3: #b91630;
+    --theme-dark-3: #EA520F;
+    /*--theme-dark-3: #b91630;*/
     --theme-dark-4: #910A67;
     --theme-dark-5: #F7F8FC;
 
@@ -91,4 +92,42 @@ main {
 }
 .tright {
     border-radius: 0 0 0 100%;
+}
+
+/*EDUCATION*/
+.education {
+    display: flex;
+    flex-direction: column;
+    padding: 2svh;
+    padding-inline: 10svw;
+    margin-block: 3svh;
+    gap: 6svh;
+    min-width: 40em;
+    /*backdrop-filter: contrast(80%) ;*/
+}
+.university {
+
+}
+.uni-info {
+    display: flex;
+    align-items: baseline;
+    margin-block: 1svh;
+    justify-content: space-between;
+    /*color: var(--theme-dark-3);*/
+}
+.degree-title {
+    font-size: 1.5em;
+}
+.degree-name {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 4svw;
+}
+.uni-desc {
+    padding-left: 1svw;
+}
+
+span {
+    color: var(--theme-dark-3);
 }
