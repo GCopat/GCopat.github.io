@@ -116,13 +116,13 @@ main {
     /*color: var(--theme-dark-3);*/
 }
 .degree-title {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 .degree-name {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 400;
     font-style: italic;
-    padding-left: 4svw;
+    padding-left: 1svw;
 }
 .uni-desc {
     padding-left: 1svw;
@@ -130,4 +130,26 @@ main {
 
 span {
     color: var(--theme-dark-3);
+    transform: rotate(0deg);
+    display: inline-block;
+    transition: .25s transform ease;
+}
+.uni-details {
+    width: 50svw;
+    position: relative;
+    display: flex;
+    margin-block: 1svh;
+    /*justify-content: space-between;*/
+}
+summary {
+    width: 50svw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: solid var(--theme-dark-3) 2px;
+    margin-bottom: 1svh;
+}
+details[open] span {
+    transform: rotate(90deg);
 }
