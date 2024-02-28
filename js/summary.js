@@ -158,3 +158,12 @@ function closeAll() {
         })
 }
 
+function switchSelector(){
+    let the_switch = $('#switch');
+    if ( the_switch.is(':checked') ) {
+        openAll();
+    } else {
+        closeAll();
+    }
+}
+
