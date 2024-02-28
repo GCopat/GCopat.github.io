@@ -11,6 +11,7 @@
 .degree {
     margin-inline: auto;
     width: 80%;
+    max-width: 800px;
     /*border-bottom: var(--theme-dark-2) solid 2px;*/
     /*border-top: var(--theme-dark-2) solid 2px;*/
     border-radius: 10px;
