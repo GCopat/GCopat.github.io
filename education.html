@@ -17,6 +17,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/education.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
   <meta name="theme-color" content="#fafafa">
@@ -24,70 +25,104 @@
 
 <body>
 <header>
-<!--  <div class="triangle tleft"></div>-->
   <nav class="navBar">
       <a href="./index.html" class="nav-link special">Home</a>
       <a href="./index.html" class="nav-link">Projects</a>
       <a href="./education.html" class="nav-link">Education</a>
   </nav>
-<!--  <div class="triangle tright"></div>-->
 </header>
 
 <main class="index">
-  <h1 class="title">Education</h1>
-  <div class="controls">
-    <ul id="control-list">
-      <li><button onclick="openAll()">Expand All</button></li>
-      <li><button onclick="closeAll()">Collapse All</button></li>
-    </ul>
-  </div>
-  <article class="education">
-    <section class="university">
-      <details open class="uni-details">
-        <summary>
-          <h1 class="degree-title"><span class="span-test">&#11166;</span> MSc Software Engineering</h1>
-          <h2 class="degree-name">Cardiff University 2023-2024</h2>
-        </summary>
-        <p class="uni-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non aliquet justo. Praesent non ultricies purus. Sed eget ex sit amet ligula auctor mollis a quis quam. Integer ac dui tempor, volutpat turpis vitae, consequat justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras quam arcu, porttitor quis massa sit amet, porttitor vulputate mauris. Mauris posuere ex leo. Donec sem lectus, varius eget augue eu, laoreet pharetra nisi. Duis at lorem accumsan, laoreet quam eu, accumsan lectus. Proin a sapien a ante auctor hendrerit. </p>
-      </details>
-    </section>
-    <section class="university">
-      <details class="uni-details">
-        <summary>
-          <h1 class="degree-title"><span class="span-test">&#11166;</span> MSc in Sport and Exercise Science</h1>
-          <h2 class="degree-name">Cardiff Metropolitan University 2022-2023</h2>
-        </summary>
-        <p class="uni-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non aliquet justo. Praesent non ultricies purus. Sed eget ex sit amet ligula auctor mollis a quis quam. Integer ac dui tempor, volutpat turpis vitae, consequat justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras quam arcu, porttitor quis massa sit amet, porttitor vulputate mauris. Mauris posuere ex leo. Donec sem lectus, varius eget augue eu, laoreet pharetra nisi. Duis at lorem accumsan, laoreet quam eu, accumsan lectus. Proin a sapien a ante auctor hendrerit. </p>
-      </details>
-    </section>
-    <section class="university">
-      <details class="uni-details">
-        <summary>
-          <h1 class="degree-title"><span class="span-test">&#11166;</span> BSc in Sport and Exercise Science</h1>
-          <h2 class="degree-name">Cardiff Metropolitan University 2019-2022</h2>
-        </summary>
-        <p class="uni-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non aliquet justo. Praesent non ultricies purus. Sed eget ex sit amet ligula auctor mollis a quis quam. Integer ac dui tempor, volutpat turpis vitae, consequat justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras quam arcu, porttitor quis massa sit amet, porttitor vulputate mauris. Mauris posuere ex leo. Donec sem lectus, varius eget augue eu, laoreet pharetra nisi. Duis at lorem accumsan, laoreet quam eu, accumsan lectus. Proin a sapien a ante auctor hendrerit. </p>
-      </details>
-    </section>
-    <section class="university">
-      <details class="uni-details">
-        <summary>
-          <h1 class="degree-title"><span class="span-test">&#11166;</span> DipHE in Computer Science</h1>
-          <h2 class="degree-name">University of Exeter 2017-2019</h2>
-        </summary>
-        <p class="uni-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non aliquet justo. Praesent non ultricies purus. Sed eget ex sit amet ligula auctor mollis a quis quam. Integer ac dui tempor, volutpat turpis vitae, consequat justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras quam arcu, porttitor quis massa sit amet, porttitor vulputate mauris. Mauris posuere ex leo. Donec sem lectus, varius eget augue eu, laoreet pharetra nisi. Duis at lorem accumsan, laoreet quam eu, accumsan lectus. Proin a sapien a ante auctor hendrerit. </p>
-      </details>
-    </section>
-    <section class="university">
-      <details class="uni-details">
-        <summary>
-          <h1 class="degree-title"><span class="span-test">&#11166;</span> Foundation Degree in Mathematics, Physics and Engineering with Distinction</h1>
-          <h2 class="degree-name">University of Exeter 2016-2016</h2>
-        </summary>
-        <p class="uni-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non aliquet justo. Praesent non ultricies purus. Sed eget ex sit amet ligula auctor mollis a quis quam. Integer ac dui tempor, volutpat turpis vitae, consequat justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras quam arcu, porttitor quis massa sit amet, porttitor vulputate mauris. Mauris posuere ex leo. Donec sem lectus, varius eget augue eu, laoreet pharetra nisi. Duis at lorem accumsan, laoreet quam eu, accumsan lectus. Proin a sapien a ante auctor hendrerit. </p>
-      </details>
-    </section>
+  <article class="page-top">
+    <h1 class="title">Education</h1>
+    <label class="switch">
+      <input type="checkbox" class="chk" id="switch" onclick="switchSelector()">
+      <span class="slider"></span>
+    </label>
   </article>
+  <article class="education">
+    <details open class="degree">
+      <summary>
+        <div class="degree-title">
+          <span class="arrow">&#11166;</span>
+          <h1>MSc Software Engineering</h1>
+        </div>
+        <div class="degree-subtitle">
+          <h2>Cardiff University</h2>
+          <h3>2023 - 2024</h3>
+        </div>
+      </summary>
+      <p class="degree-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis nunc, pellentesque eu faucibus quis, ultricies vitae neque. Aenean sed ipsum non erat sollicitudin interdum eu ut ligula. Duis dapibus, nulla a bibendum maximus, velit metus vulputate orci, maximus euismod lacus est nec nisl. Nulla facilisi. Quisque fermentum, justo ac tristique viverra, lacus odio consectetur nibh, eu mattis ipsum ligula sit amet eros. Etiam lobortis ut mauris quis dignissim. Nam ut eros sed risus mattis egestas.
+        Nunc et sem dolor. Phasellus congue feugiat eros id egestas. Proin id ante ut leo dapibus posuere et sit amet arcu. Suspendisse elementum ac. </p>
+    </details>
+
+    <details class="degree">
+      <summary>
+        <div class="degree-title">
+          <span class="arrow">&#11166;</span>
+        <h1>MSc Sport and Exercise Science</h1>
+        </div>
+      <div class="degree-subtitle">
+        <h2>Cardiff Metropolitan University</h2>
+        <h3>2022 - 2023</h3>
+      </div>
+      </summary>
+      <p class="degree-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis nunc, pellentesque eu faucibus quis, ultricies vitae neque. Aenean sed ipsum non erat sollicitudin interdum eu ut ligula. Duis dapibus, nulla a bibendum maximus, velit metus vulputate orci, maximus euismod lacus est nec nisl. Nulla facilisi. Quisque fermentum, justo ac tristique viverra, lacus odio consectetur nibh, eu mattis ipsum ligula sit amet eros. Etiam lobortis ut mauris quis dignissim. Nam ut eros sed risus mattis egestas.
+        Nunc et sem dolor. Phasellus congue feugiat eros id egestas. Proin id ante ut leo dapibus posuere et sit amet arcu. Suspendisse elementum ac. </p>
+    </details>
+
+    <details class="degree">
+      <summary>
+        <div class="degree-title">
+          <span class="arrow">&#11166;</span>
+          <h1>BSc Sport and Exercise Science</h1>
+        </div>
+      <div class="degree-subtitle">
+        <h2>Cardiff Metropolitan University</h2>
+        <h3>2019 - 2022</h3>
+      </div>
+      </summary>
+      <p class="degree-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis nunc, pellentesque eu faucibus quis, ultricies vitae neque. Aenean sed ipsum non erat sollicitudin interdum eu ut ligula. Duis dapibus, nulla a bibendum maximus, velit metus vulputate orci, maximus euismod lacus est nec nisl. Nulla facilisi. Quisque fermentum, justo ac tristique viverra, lacus odio consectetur nibh, eu mattis ipsum ligula sit amet eros. Etiam lobortis ut mauris quis dignissim. Nam ut eros sed risus mattis egestas.
+        Nunc et sem dolor. Phasellus congue feugiat eros id egestas. Proin id ante ut leo dapibus posuere et sit amet arcu. Suspendisse elementum ac. </p>
+    </details>
+
+    <details class="degree">
+      <summary>
+        <div class="degree-title">
+          <span class="arrow">&#11166;</span>
+          <h1>DipHE in Computer Science</h1>
+        </div>
+        <div class="degree-subtitle">
+          <h2>University of Exeter</h2>
+          <h3>2017 - 2019</h3>
+        </div>
+      </summary>
+      <p class="degree-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis nunc, pellentesque eu faucibus quis, ultricies vitae neque. Aenean sed ipsum non erat sollicitudin interdum eu ut ligula. Duis dapibus, nulla a bibendum maximus, velit metus vulputate orci, maximus euismod lacus est nec nisl. Nulla facilisi. Quisque fermentum, justo ac tristique viverra, lacus odio consectetur nibh, eu mattis ipsum ligula sit amet eros. Etiam lobortis ut mauris quis dignissim. Nam ut eros sed risus mattis egestas.
+        Nunc et sem dolor. Phasellus congue feugiat eros id egestas. Proin id ante ut leo dapibus posuere et sit amet arcu. Suspendisse elementum ac. </p>
+    </details>
+
+    <details class="degree">
+      <summary>
+        <div class="degree-title">
+          <span class="arrow">&#11166;</span>
+          <h1>Foundation Degree in Maths, Engineering and Physics</h1>
+        </div>
+        <h4>with Distinction</h4>
+        <div class="degree-subtitle">
+          <h2>University of Exeter</h2>
+          <h3>2016 - 2017</h3>
+        </div>
+      </summary>
+      <p class="degree-desc content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis nunc, pellentesque eu faucibus quis, ultricies vitae neque. Aenean sed ipsum non erat sollicitudin interdum eu ut ligula. Duis dapibus, nulla a bibendum maximus, velit metus vulputate orci, maximus euismod lacus est nec nisl. Nulla facilisi. Quisque fermentum, justo ac tristique viverra, lacus odio consectetur nibh, eu mattis ipsum ligula sit amet eros. Etiam lobortis ut mauris quis dignissim. Nam ut eros sed risus mattis egestas.
+        Nunc et sem dolor. Phasellus congue feugiat eros id egestas. Proin id ante ut leo dapibus posuere et sit amet arcu. Suspendisse elementum ac. </p>
+    </details>
+
+  </article>
+
+
+
+
+
 </main>
 
 </body>

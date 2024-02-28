@@ -7,6 +7,8 @@ class Accordion {
         // Store the <div class="content"> element
         this.content = el.querySelector('.content');
 
+        this.span = el.querySelector('.arrow');
+
         // Store the animation object (so we can cancel it if needed)
         this.animation = null;
         // Store if the element is closing
@@ -51,12 +53,24 @@ class Accordion {
             // Set the keyframes from the startHeight to endHeight
             height: [startHeight, endHeight]
         }, {
-            duration: 400,
+            duration: 500,
+            easing: 'ease-out'
+        });
+
+        this.span.animate({
+            // Set the keyframes from the startHeight to endHeight
+            rotate: ['90deg', '0deg']
+        }, {
+            duration: 500,
             easing: 'ease-out'
         });
 
         // When the animation is complete, call onAnimationFinish()
-        this.animation.onfinish = () => this.onAnimationFinish(false);
+        this.animation.onfinish = () => {
+            this.onAnimationFinish(false);
+            this.span.style.rotate = '0deg';
+
+        };
         // If the animation is cancelled, isClosing variable is set to false
         this.animation.oncancel = () => this.isClosing = false;
     }
@@ -92,8 +106,19 @@ class Accordion {
             duration: 400,
             easing: 'ease-out'
         });
+        this.span.animate({
+            // Set the keyframes from the startHeight to endHeight
+            rotate: ['0deg', '90deg']
+        }, {
+            duration: 500,
+            easing: 'ease-out'
+        });
         // When the animation is complete, call onAnimationFinish()
-        this.animation.onfinish = () => this.onAnimationFinish(true);
+        this.animation.onfinish = () => {
+            this.onAnimationFinish(true);
+            this.span.style.rotate = '90deg';
+
+        };
         // If the animation is cancelled, isExpanding variable is set to false
         this.animation.oncancel = () => this.isExpanding = false;
     }
@@ -108,6 +133,7 @@ class Accordion {
         this.isExpanding = false;
         // Remove the overflow hidden and the fixed height
         this.el.style.height = this.el.style.overflow = '';
+
     }
 }
 
@@ -130,5 +156,14 @@ function closeAll() {
                 e.querySelector('summary').click();
             }
         })
+}
+
+function switchSelector(){
+    let the_switch = $('#switch');
+    if ( the_switch.is(':checked') ) {
+        openAll();
+    } else {
+        closeAll();
+    }
 }
 
