@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-dark-1: #232931;
+        --theme-dark-2: #393E46;
+        --theme-dark-3: rgb(240, 84, 84);
+        --text: #F7F8FC;
+
+        color: var(--text);
+    }
+}
+html {
+    color-scheme: dark;
+}
+/*:root{*/
+/*    !*--theme-light-1: #F7F8FC;*!*/
+/*    !*--theme-light-2: #910A67;*!*/
+/*    !*--theme-light-3: #720455;*!*/
+/*    !*--theme-light-4: #3C0753;*!*/
+/*    !*--theme-light-5: #202136;*!*/
+/*    */
+/*}*/
