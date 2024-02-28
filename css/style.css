@@ -32,7 +32,9 @@
     box-sizing: border-box;
     font-family: 'Sen', sans-serif;
 }
-
+html {
+    color-scheme: dark;
+}
 body {
     background-color: var(--theme-dark-1);
     gap: 5svh;
@@ -233,7 +235,7 @@ button:hover {
     right: -17px;
     background-color: white;
     border: 4px solid var(--theme-dark-3);
-    top: 25%;
+    top: 35%;
     border-radius: 50%;
     z-index: 1;
 }
@@ -253,7 +255,7 @@ button:hover {
     content: "";
     height: 0;
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 0;
     z-index: 1;
     right: 30px;
@@ -267,7 +269,7 @@ button:hover {
     content: " ";
     height: 0;
     position: absolute;
-    top: 30%;
+    top: 40%;
     width: 0;
     z-index: 1;
     left: 30px;
@@ -341,7 +343,7 @@ button:hover {
 
 }
 .degree-year {
-    font-family: 'Kdam Thmor Pro', sans-serif;
+    /*font-family: 'Kdam Thmor Pro', sans-serif;*/
     /*font-weight: 600;*/
     /*text-decoration: underline;*/
     /*text-decoration-color: var(--theme-dark-3);*/
