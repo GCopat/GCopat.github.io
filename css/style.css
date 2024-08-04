@@ -7,19 +7,21 @@
 }
 
 body {
-    background-color: var(--theme-dark-1);
+    background-color: var(--theme-dark-2);
     display: flex;
     flex-direction: column;
     height: 100svh;
     position: relative;
+    animation: scrollAppear 2s;
 }
 
 /*HEADER######################################################*/
 header {
+    display: none;
+    /* display: flex; */
     position: sticky;
     background-color: var(--theme-dark-2);
     box-shadow: rgb(0, 0, 0) 0 5px 20px -10px;
-    display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-block: 1.5em;
@@ -83,7 +85,107 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-block: 5%;
 }
+.about-me {
+    position: sticky;
+    /* border: solid black 10px; */
+    display: grid;
+    grid-template-areas: 
+                    "A B"
+                    "c c";
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 48% 48%;
+    column-gap: 2%;
+    height: min(60svh, 700px);
+    padding-block: 2.5%;
+    
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    animation-name: fadeOut;
+    animation-timeline: view(30% 60%);
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    background-blend-mode: screen;
+    border: solid 1px gray;
+    border-radius: 50px;
+    
+    box-shadow: 2px 2px 15px black;
+}
+.about-me-container {
+    position: relative;
+    content: "";
+    width: fit-content;
+    height: fit-content;  
+}
+.about-me::before {
+    filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.089);
+    content: "";
+    width: 99%;
+    height: 99%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.about-me-title {
+    grid-area: A;
+    position: relative;
+    font-size: xx-large;
+    overflow: hidden;
+    width: 30svw;
+    background-position: 0 10; 
+    justify-self: center;
+    align-self: center;
+    font-size-adjust: 0.7;
+    > h1:nth-child(1) {
+        background: radial-gradient(circle at 5% 5%, var(--theme-dark-accent) 20%, white 40%);
+        color: transparent;
+        background-clip: text;
+        text-align: end;
+    }
+    > h1:nth-child(2) {
+        background: radial-gradient(circle at 90% 100%, var(--theme-dark-accent) 10%, white 50%);
+        color: transparent;
+        background-clip: text;
+        text-align: end;
+    }
+    > h1 {
+        /* filter: drop-shadow(-2px -2px 2px rgba(255, 255, 255, 0.5)); */
+        text-shadow: inset -2px -2px 2px rgba(255, 255, 255, 0.5);
+    }
+}
+.bg-move {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* background-clip: text; */
+    /* animation: MOVE-BG 10s linear infinite; */
+    
+}
+
+@keyframes MOVE-BG {
+    0% {
+        background-position: 0 50%; 
+    }
+    100% { 
+        background-position: 0 300%; 
+    }
+ }
+
+ @keyframes fadeOut {
+    0% { opacity: 1}
+    50% {opacity: 1}
+    100% {opacity: 0}
+ }
+
 
 .title {
     font-size: 3em;
@@ -120,13 +222,15 @@ main {
     align-items: center;
 }
 
-
+.ptitle {
+    grid-area: B;
+    align-self: flex-end;
+    padding-bottom: 50px;
+}
 
 main .content{
-    width: 100%;
-    min-height: 30svh;
+    width: 40%;
     padding-top: 10px;
-    background-color: var(--bg, var(--theme-dark-3));
     display: flex;
     flex-direction: column;
     & h1 {
@@ -134,69 +238,102 @@ main .content{
     }
 }
 
-main .content:nth-child(odd){
-    --bg: var(--theme-dark-1);
+
+.languages {
+    grid-area: c;
+    width: 90%;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 25% 65%;
+    >h2 {
+        padding-left: max(10px, 20%)  ;
+        align-self: flex-end;
+    }
+    
 }
 
-main .content:nth-child(even){
-    --bg: var(--theme-dark-2);
-}
 .allLangs {
     display: flex;
     margin-inline: auto;
-    width: 80%;
     align-items: center;
     justify-content: center;
+    align-self: center;
+    justify-self: center;
     flex-wrap: nowrap;
-    max-width: 800px;
-
+    gap: 1%;
+    width: 100%;
+    z-index: 99;
     transform-style: preserve-3d;
-    transform: perspective(1000px);
-    /* transition: 2s ease-out; */
+    transform: perspective(1500px);
+    animation: scrollAppear;
 
+}
+@keyframes scrollAppear {
+    from{ opacity: 0};
+    to {opacity: 1};
     
-
 }
  
 .allLangs .langImg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    justify-self: center;
     padding: 10px;
-    margin-block: 0.5svh;
+    /* margin-block: 0.5svh; */
     /* border: black 1px solid; */
     transition: .4s ease-out;
-    filter: brightness(0.9);
+    /* filter: brightness(0.9); */
+    background-color: rgb(48, 0, 87);
+    border-radius: 10px;
+    width: 120px;
+    height: 130px;
+    > h3 {
+        font-size-adjust: 0.3;
+    }
     
 }
 .langImg svg {
-    filter: drop-shadow(rgba(0, 0, 0, 0.5) 10px 10px 4px);
+    /* filter: drop-shadow(rgba(0, 0, 0, 0.5) 10px 10px 4px); */
+    transition: .8s ease-out;
+    perspective: 0px;
+    width: 100%;
+    height: 100%;
+    
+}
+:root {
+    --tZ-1: 250px;
+    --tZ-2: 150px;
+    --tZ-3: 50px; 
 }
 
 .allLangs:hover .langImg{
     filter: brightness(0.2);
-    transform: translateZ(0) scale(1);
+    transform: translateZ(50px);
 }
 
 .allLangs .langImg:hover {
     filter: brightness(1) drop-shadow(rgba(255, 255, 255, 0.2) -1px -1px 4px);
-    transform: translateZ(50px) scale(1.3);
+    transform: translateZ(var(--tZ-1));
 }
+
 .allLangs .langImg:hover + * {
     filter: brightness(0.7);
-    transform: translateZ(35px) scale(1.2);
-}
-.allLangs .langImg:hover + * + * {
-    filter: brightness(0.4);
-    transform: translateZ(25px) scale(1.1);
+    transform: translateZ(var(--tZ-2)) rotateY(40deg) ;
 }
 .allLangs .langImg:has(+ *:hover ){
     filter: brightness(0.7);
-    transform: translateZ(35px) scale(1.2);
+    transform: translateZ(var(--tZ-2)) rotateY(-40deg);
+}
+
+.allLangs .langImg:hover + * + * {
+    filter: brightness(0.4);
+    transform: translateZ(var(--tZ-3)) rotateY(20deg);
 }
 .allLangs .langImg:has(+ * + *:hover){
     filter: brightness(0.4);
-    transform: translateZ(25px) scale(1.1);
+    transform: translateZ(var(--tZ-3)) rotateY(-20deg);
 }
 
 
