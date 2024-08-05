@@ -113,23 +113,18 @@ main {
     border-radius: 50px;
     
     box-shadow: 2px 2px 15px black;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(0, 0, 0, 0.2)
+    );
 }
 .about-me-container {
     position: relative;
     content: "";
     width: fit-content;
     height: fit-content;  
-}
-.about-me::before {
-    filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.089);
-    content: "";
-    width: 99%;
-    height: 99%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden;
 }
 
 .about-me-title {
