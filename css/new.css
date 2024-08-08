@@ -1,0 +1,179 @@
+@import url('themes.css');
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+    --introDelay: 1s;
+    --introDuration: 2s;
+    --introFunction: cubic-bezier(0.5, 0.5, 0, 1);
+    --lineGradient: linear-gradient(to left, transparent 20%, white 50%, transparent 80%);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+}
+body {
+    position: relative;
+    background: linear-gradient(to bottom right, var(--theme-dark-2) 50%, var(--theme-dark-1));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    animation: scrollAppear 2s;
+}
+.animated-intro {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.animated-intro#top-bar {
+    left: 0;
+    top:0;
+    animation: introGoUp var(--introDuration, 2s) var(--introFunction) var(--introDelay) forwards;
+    
+}
+#title {
+    position: absolute;
+    bottom: 0;
+    font-size: 3.5em;
+}
+#title-bottom {
+    position: absolute;
+    display: flex;
+    opacity: 1;
+    top: 0;
+}
+#title-bottom .langImg {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+    border-radius: 15px;
+
+    > svg {
+        height: 80px;
+        width: fit-content;
+    }
+}
+
+.animated-intro#bottom-bar {
+    left: 0;
+    bottom: 0;
+    animation: introGoDown var(--introDuration, 2s) var(--introFunction) var(--introDelay) forwards;
+}
+.animated-intro#top-bar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--lineGradient);
+    bottom: 0;
+    left: 0;
+}
+.animated-intro#bottom-bar::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--lineGradient);
+    top: 0;
+    left: 0;
+}
+.animated-intro-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-name: fadeIn;
+
+    z-index: 99;
+
+}
+.animated-intro-content {
+    display: grid;
+    grid-template-rows: 45% 45%;
+    gap: 10%;
+    flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+
+}
+
+@keyframes introGoUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-82%);
+    }
+}
+@keyframes introGoUpMore {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1000%);
+    }
+}
+@keyframes introGoDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+        /* transform: translateY(0%); */
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }    
+}
+
+main {
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    opacity: 0;
+    animation: fadeIn var(--introDuration) var(--introFunction) calc(var(--introDelay)) forwards;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.empty-space {
+    width: 100%;
+    height: 100%;
+    border: white 1px solid;
+}
