@@ -13,7 +13,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --theme-dark-1: #232931;
-        --theme-dark-1: #24292E;
+        /* --theme-dark-1: #24292E; */
         --theme-dark-2: #1D2125;
         --theme-dark-accent: rgb(136, 0, 255);
         /* --theme-dark-3: #1D2125; */
