@@ -285,8 +285,26 @@ main {
 
 
 
+
+
+@keyframes rotations {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+#mariadb-icon {
+    filter: brightness(1.5);
+}
+
+
+/* ############################ */
+
 .content-block:nth-child(2) {
-    width: 90%;
+    width: 70%;
     height: 150px;
     display: flex;
     justify-content: space-evenly;
@@ -299,20 +317,9 @@ main {
     filter: drop-shadow(rgba(0,0,0,0.5) 2px 2px 5px);
     /* animation: rotations linear;
     animation-timeline: view(); */
-}
-#vite {
-    animation: none;
-}
-
-@keyframes rotations {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    
-}
-#mariadb-icon {
-    filter: brightness(2);
+    transition: .5s;
+    transform:  perspective(1000px);
+    --tZ-1: 200px;
+    --tZ-2: 100px;
+    --tZ-3: 50px;
 }
