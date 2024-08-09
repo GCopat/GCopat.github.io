@@ -8,11 +8,13 @@
     --introDelay: 1s;
     --introDuration: 2s;
     --introFunction: cubic-bezier(0.5, 0.5, 0, 1);
-    --lineGradient: linear-gradient(to left, transparent 20%, white 50%, transparent 80%);
+    --lineGradient: linear-gradient(to left, transparent 10%, white 50%, transparent 90%);
+    --backgroundGradient: linear-gradient(to left, var(--theme-dark-2), rgb(50, 50, 50) 20%, rgb(50, 50, 50) 80%, var(--theme-dark-2)) ;
 }
 
 html {
     width: 100%;
+    min-height: 100%;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
@@ -29,14 +31,15 @@ body {
     animation: scrollAppear 2s;
 }
 .animated-intro {
-    /* display: flex; */
     display: none;
+    display: flex;
     justify-content: center;
     position: fixed;
     width: 100%;
     height: 50%;
     /* background: rgba(255, 255, 255, 0.1); */
-    background: rgb(50, 50, 50);
+    /* background: rgb(50, 50, 50); */
+    background: var(--backgroundGradient);
     
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -177,11 +180,13 @@ main {
     /* animation: fadeIn calc(var(--introDuration) + 0.5s) var(--introFunction) calc(var(--introDelay) + 0.5s) forwards; */
     color: white;
 }
+.content-block {
+    border: white 1px solid;
+    width: 100%;
+    height: 60svh;
+    margin-top: 5%;
+}
 .first-content{
-   border: white 1px solid;
-   width: 100%;
-   height: 60svh;
-   margin-top: 5%;
    display: grid;
    grid-template-columns: 49% 49%;
    gap: 2%; 
@@ -190,4 +195,57 @@ main {
         justify-self: flex-end;
         font-size: 5em;
    }
+}
+
+.img-logo {
+    width: 128px;
+    height: 128px;
+    filter: drop-shadow(rgba(0,0,0,0.5) 2px 2px 5px);
+    animation: rotations linear;
+    animation-timeline: view();
+}
+#vite {
+    animation: none;
+}
+
+@keyframes rotations {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+
+
+
+
+  /* Shine */
+html::after {
+    content:'';
+    top:0;
+    transform:translateX(100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:1;
+    animation: slide calc(var(--introDuration) - 0.2s) calc(var(--introDelay) + 0.2s) forwards;
+    opacity: 40%;
+       
+    /* 
+    CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/ 
+    */
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(128,186,232,0) 99%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.8)), color-stop(99%,rgba(128,186,232,0)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* IE10+ */
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(125,185,232,0) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+  }
+@keyframes slide {
+	0% {transform:translateX(-100%);}
+	100% {transform:translateX(100%);}
 }
