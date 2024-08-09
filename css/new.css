@@ -245,7 +245,7 @@ main {
     height: 100%;
     position: absolute;
     z-index:1;
-    animation: slide calc(var(--introDuration)) calc(var(--introDelay) + 0.3s) var(--introFunction) forwards;
+    animation: slide calc(var(--introDuration)) calc(var(--introDelay) + 0.4s) var(--introFunction) forwards;
     opacity: 40%;
        
     /* 
