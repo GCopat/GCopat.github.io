@@ -187,14 +187,23 @@ main {
     margin-top: 5%;
 }
 .first-content{
-   display: grid;
-   grid-template-columns: 49% 49%;
-   gap: 2%; 
-   align-content: center;
-   > h1 {
+    display: grid;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+    grid-template-columns: 49% 49%;
+    gap: 2%; 
+    width: 80%;
+    margin-inline: auto;
+    align-content: center;
+    overflow: hidden;
+    > h1 {
         justify-self: flex-end;
         font-size: 5em;
-   }
+    }
 }
 
 .img-logo {
@@ -223,7 +232,7 @@ main {
 
 
   /* Shine */
-html::after {
+.first-content::after {
     content:'';
     top:0;
     transform:translateX(100%);
