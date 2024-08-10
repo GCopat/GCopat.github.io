@@ -1,4 +1,4 @@
-@import url('./themes.css');
+@import url('themes.css');
 
 :root {
     --introDelay: 1s;

@@ -1,4 +1,4 @@
-@import url('./themes.css');
+@import url('themes.css');
 
 :root {
     --introDelay: 1s;
@@ -235,7 +235,7 @@ body::before {
 @keyframes fadeInGrow {
     0% {
         opacity: 0;
-        scale: 0.5;
+        scale: 0.7;
     }
     70% {
         opacity: 1;
@@ -270,40 +270,36 @@ main {
     animation: fadeIn calc(var(--introDuration) + 0.8s) calc(var(--introDelay) + 0.6s) var(--introFunction) forwards;
 }
 .content-block:nth-child(1){
-    background: linear-gradient(-45deg, rgba(75, 21, 128, 0.5) -20%, var(--td1) 150%);
-    height: 50svh;
+    background: linear-gradient(150deg, rgba(75, 21, 128, 0.8) , var(--td1) 120%);
+    /* border: 1px solid rgba(255, 255, 255, 1); */
+    border-radius: 50px;
+    box-shadow: 0 0 2px 0px rgba(255, 255, 255, 0.4);
     max-height: 500px;
-    width: 100%;
-    mask: linear-gradient(to bottom, white 70%, transparent);
-    padding-top: 40svh;
-    padding-bottom: 40svh;
-    margin-bottom: -10svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    animation: none;
-    > div {
-        width: 80%;
-        height: inherit;
-        display: grid;
-        grid-template-columns: 20% 80%;
-        grid-template-rows: 100%;
-        gap: 4%; 
-        align-content: center;
-        overflow: hidden;
-        opacity: 0;
-        animation: fadeInGrow calc(var(--introDuration) - 0.2s ) calc(var(--introDelay) + 0.2s) var(--introFunction) forwards;
-    }
+    
+    width: 60%;
+    max-width: 2000px;
+    min-width: 600px;
+    height: 50svh;
+    margin-top: 15svh;
+    margin-bottom: 5svh;
+    display: grid;
+    grid-template-columns: 33% 63%;
+    grid-template-rows: 100%;
+    gap: 4%; 
+    align-content: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInGrow calc(var(--introDuration) - 0.2s ) calc(var(--introDelay) + 0.2s) var(--introFunction) forwards;
 }
 .the-text {
     display: flex;
     flex-direction: column;
     font-size: calc(2em * var(--fontSizeMult));
+    padding: 15px;
     height: 100%;
-    width: inherit;
     justify-content: center;
     gap: 10%;
+    /* >p {display: inline;} */
 }
 .the-text span {
     position: relative;
@@ -319,7 +315,7 @@ main {
     border-radius: 1px solid white;
     text-overflow: clip;
     width: 100%;
-    /* white-space: nowrap; */
+    white-space: nowrap;
 }
 .first-content-title-wrapper {
     width: 100%;
@@ -341,8 +337,7 @@ main {
     overflow: hidden;
 }
   /* Shine */
-
-.second-content::after, .first-content::after {
+.first-content::after, .second-content::after {
     content:'';
     top:0;
     left: 0;
@@ -365,9 +360,6 @@ main {
     background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(125,185,232,0) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 );
   }
-.first-content::after {
-    opacity: 0.1;
-}
 @keyframes slide {
 	0% {transform:translateX(-100%);}
 	100% {transform:translateX(100%);}
@@ -409,7 +401,6 @@ main {
     box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    margin-bottom: 20svh;
 }
 
 .img-logo {
@@ -429,22 +420,6 @@ main {
     justify-self: center;
     
 }
-.c3-title{
-    position: relative;
-    text-align: center;
-    margin: 0;
-    height: fit-content;
-    background: linear-gradient(to right, #eb3678, #f13d70, #f54567, #f94e5e, #fb5856, #fc624d, #fc6d45, #fb773c);
-    background-clip: text;
-    color: transparent;
-    width: 100%;
-    font-size: calc(6em * var(--fontSizeMult));
-    animation: fadeInOut forwards;
-    animation-duration: 1s;
-    animation-timeline: view(80% 10%);
-    opacity: 0;
-}
-
 @keyframes fadeInOut {
     0%, 20% {
         opacity: 0;
@@ -474,12 +449,11 @@ main {
     /* animation-fill-mode: forwards; */
     /* border: white 2px solid; */
     opacity: 0;
-    margin-top: 10svh;
-    padding-block: 5svh;
+    margin-top: 150px;
     transition: .6s;
     >h2 {
         grid-area: t;
-        font-size: calc(2.5em * var(--fontSizeMult));
+        font-size: calc(3em * var(--fontSizeMult));
         text-align: center;
         align-items: center;
         background: linear-gradient(90deg, #eb3678, #f13d70, #f54567, #f94e5e, #fb5856, #fc624d, #fc6d45, #fb773c);
@@ -490,18 +464,18 @@ main {
     > p {
         grid-area: a;
         text-align: justify;
-        font-size: calc(1.5em * var(--fontSizeMult));
+        font-size: calc(2em * var(--fontSizeMult));
         width: 70%;
         line-height: 1.3;
         text-justify: inter-word;
     }
 }
-.third-content article:nth-child(even) {
+.third-content article:nth-child(odd) {
     position: relative;
     justify-self: flex-start;
     padding-right: 15px;
 }
-.third-content article:nth-child(even)::after{
+.third-content article:nth-child(odd)::after{
     position: absolute;
     right: 0;
     top: 0;
@@ -510,7 +484,7 @@ main {
     content: "";
     background: linear-gradient(to top, transparent 5%, white 50%, transparent 95%);
 }
-.third-content article:nth-child(odd) {
+.third-content article:nth-child(even) {
     justify-self: flex-end;
     padding-left: 15px;
 
@@ -519,7 +493,7 @@ main {
         background-clip: text;
     }
 }
-.third-content article:nth-child(odd)::after{
+.third-content article:nth-child(even)::after{
     position: absolute;
     left: 0;
     top: 0;
@@ -543,11 +517,11 @@ main {
 
     
 }
-article:nth-child(even) .third-technologies {
-    left: -5%;
-}
 article:nth-child(odd) .third-technologies {
-    right: -5%;
+    left: 0;
+}
+article:nth-child(even) .third-technologies {
+    right: 0;
 }
 .third-technologies .img-logo {
     width: 50px;
@@ -607,20 +581,20 @@ footer::after{
     :root {
         --fontSizeMult: 0.8;
     }
-    .third-content > article:nth-child(odd) {
+    .third-content > article:nth-child(even) {
         padding-left: 0 !important;
         width: 90%;
         justify-self: center;
     }
-    .third-content > article:nth-child(even) {
+    .third-content > article:nth-child(odd) {
         padding-right: 0 !important;
         width: 90%;
         justify-self: center;
     }
-    article:nth-child(even) .third-technologies {
+    article:nth-child(odd) .third-technologies {
         left: -10%;
     }
-    article:nth-child(odd) .third-technologies {
+    article:nth-child(even) .third-technologies {
         right: -10%;
     }
     body::before {
