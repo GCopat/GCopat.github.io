@@ -53,10 +53,10 @@ function App() {
           <p>Progressive Web App used by Cafcass practicioners to work with children and young people to ascertain their views on family law and legal proceedings
           </p>
           <div class="third-technologies">
-            <img src="./images/react-2.svg" alt="" id="vite" class="img-logo"/>
-            <img src="./images/Vitejs-logo.svg" alt="" id="vite" class="img-logo"/>
-            <img src="./images/js-icon.svg" alt="" id="vite" class="img-logo"/>
-            <img src="./images/css-icon.svg" alt="" id="vite" class="img-logo"/>
+            <img src={icons.reactIcon} alt="" id="vite" class="img-logo"/>
+            <img src={icons.viteIcon} alt="" id="vite" class="img-logo"/>
+            <img src={icons.jsIcon} alt="" id="vite" class="img-logo"/>
+            <img src={icons.cssIcon} alt="" id="vite" class="img-logo"/>
           </div>
         </article>
         <article id="vzta"> 
@@ -65,11 +65,11 @@ function App() {
             Web Application using Java, Springboot and MariaDB.<br/>
           </p>
           <div class="third-technologies">
-            <img src="./images/java-icon.svg" alt="" id="java-icon" class="img-logo"/>
-            <img src="./images/spring-icon.svg" alt="" id="spring-icon" class="img-logo"/>
-            <img src="./images/mariadb-icon.svg" alt="" id="mariadb-icon" class="img-logo"/>
-            <img src="./images/css-icon.svg" alt="" id="vite" class="img-logo"/>
-            <img src="./images/html-icon.svg" alt="" id="vite" class="img-logo"/>
+            <img src={icons.javaIcon} alt="" id="java-icon" class="img-logo"/>
+            <img src={icons.springIcon} alt="" id="spring-icon" class="img-logo"/>
+            <img src={icons.mariadbIcon} alt="" id="mariadb-icon" class="img-logo"/>
+            <img src={icons.cssIcon} alt="" id="vite" class="img-logo"/>
+            <img src={icons.htmlIcon} alt="" id="vite" class="img-logo"/>
           </div>
         </article>
         <article id="voiceGame">
@@ -77,9 +77,9 @@ function App() {
           <p>Creation of a mental math game that can be played in its entirety through voice control and sound queues, in a manner accessible to those suffering from both visual and manual dexterity realted disabilities<br/>
           </p>
           <div class="third-technologies">
-            <img src="./images/css-icon.svg" alt="" id="vite" class="img-logo"/>
-            <img src="./images/html-icon.svg" alt="" id="vite" class="img-logo"/>
-            <img src="./images/js-icon.svg" alt="" id="vite" class="img-logo"/>
+            <img src={icons.cssIcon} alt="" id="vite" class="img-logo"/>
+            <img src={icons.htmlIcon} alt="" id="vite" class="img-logo"/>
+            <img src={icons.jsIcon} alt="" id="vite" class="img-logo"/>
           </div>
         </article>
     </div>
