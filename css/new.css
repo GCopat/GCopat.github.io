@@ -1,15 +1,20 @@
 @import url('themes.css');
 
-* {
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
-
+:root {
     --introDelay: 1s;
     --introDuration: 2s;
     --introFunction: cubic-bezier(0.5, 0.5, 0, 1);
     --lineGradient: linear-gradient(to left, transparent 5%, white 50%, transparent 95%);
     --backgroundGradient: var(--td1);
+
+    --fontSizeMult: 1;
+}
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+    
 }
 
 html {
@@ -98,7 +103,7 @@ body::before {
 #title {
     position: absolute;
     bottom: 10px;
-    font-size: 4em;
+    font-size: calc(4em * var(--fontSizeMult));
     color: transparent;
     background: linear-gradient(to bottom right, white 60%, rgb(206, 206, 206) 90%);
     background-clip: text;
@@ -134,7 +139,7 @@ body::before {
     > a {
         color: whitesmoke;
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: calc(1.2em * var(--fontSizeMult));
     }
 }
 @keyframes moreHeight {
@@ -288,7 +293,7 @@ main {
 .the-text {
     display: flex;
     flex-direction: column;
-    font-size: 2em;
+    font-size: calc(2em * var(--fontSizeMult));
     padding: 15px;
     height: 100%;
     justify-content: center;
@@ -324,7 +329,7 @@ main {
     width: fit-content;
     align-self: center;
     justify-self: flex-end;
-    font-size: 5em;
+    font-size: calc(5em * var(--fontSizeMult));
 }
 .second-content {
     position: relative;
@@ -408,7 +413,7 @@ main {
     position: relative;
     display: grid;
     grid-template-columns: 100%;
-    grid-auto-rows: 1000px;
+    grid-auto-rows: max(1000px, max-content);
     height: fit-content;
     margin-top: 10svh;
     
@@ -428,11 +433,12 @@ main {
     display: grid;
     grid-template-areas: "t t" "a b";
     grid-template-columns: 100%;
-    grid-template-rows: 25% 75%;
+    grid-template-rows: max-content auto;
     flex-direction: column;
     justify-items: center;
-    font-size: 1.4em;
+    font-size: calc(1.4em * var(--fontSizeMult));
     width: 60%;
+    height: max-content;
     scale: 0.5;
     animation: fadeInOut forwards;
     animation-duration: 1s;
@@ -441,21 +447,24 @@ main {
     /* border: white 2px solid; */
     opacity: 0;
     margin-top: 150px;
+    transition: .6s;
     >h2 {
         grid-area: t;
-        font-size: 3em;
+        font-size: calc(3em * var(--fontSizeMult));
         text-align: center;
         align-items: center;
         background: linear-gradient(90deg, #eb3678, #f13d70, #f54567, #f94e5e, #fb5856, #fc624d, #fc6d45, #fb773c);
         background-clip: text;
         color: transparent;
+        padding-bottom: 10px;
     }
     > p {
         grid-area: a;
-        text-align: center;
-        font-size: 2em;
-        width: 60%;
+        text-align: justify;
+        font-size: calc(2em * var(--fontSizeMult));
+        width: 70%;
         line-height: 1.3;
+        text-justify: inter-word;
     }
 }
 .third-content article:nth-child(odd) {
@@ -559,3 +568,34 @@ footer::after{
     top: 0;
     left: 0;
 }
+
+@media (max-width: 2000px) {
+    body::before {
+        background: radial-gradient(circle at center, var(--td2), transparent 50%) ;
+    }
+}
+@media (max-width: 1250px) {
+    :root {
+        --fontSizeMult: 0.8;
+    }
+    .third-content > article:nth-child(even) {
+        padding-left: 0 !important;
+        width: 90%;
+        justify-self: center;
+    }
+    .third-content > article:nth-child(odd) {
+        padding-right: 0 !important;
+        width: 90%;
+        justify-self: center;
+    }
+    article:nth-child(odd) .third-technologies {
+        left: -10%;
+    }
+    article:nth-child(even) .third-technologies {
+        right: -10%;
+    }
+    body::before {
+        background: radial-gradient(circle at center, var(--td2), transparent 30%) ;
+    }
+  }
+
