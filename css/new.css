@@ -278,6 +278,7 @@ main {
     
     width: 60%;
     max-width: 2000px;
+    min-width: 600px;
     height: 50svh;
     margin-top: 15svh;
     margin-bottom: 5svh;
@@ -416,6 +417,7 @@ main {
     grid-auto-rows: max(1000px, max-content);
     height: fit-content;
     margin-top: 10svh;
+    justify-self: center;
     
 }
 @keyframes fadeInOut {
@@ -437,7 +439,8 @@ main {
     flex-direction: column;
     justify-items: center;
     font-size: calc(1.4em * var(--fontSizeMult));
-    width: 60%;
+    width: 70%;
+    min-width: 600px;
     height: max-content;
     scale: 0.5;
     animation: fadeInOut forwards;
@@ -599,3 +602,8 @@ footer::after{
     }
   }
 
+  @media (max-width: 1000px) {
+    :root {
+        --fontSizeMult: 0.7;
+    }
+}
