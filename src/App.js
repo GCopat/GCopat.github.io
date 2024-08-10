@@ -3,6 +3,7 @@ import './App.css';
 import * as icons from './images';
 import StartBanner from './components/StartBanner';
 import InfoCard from './components/InfoCard';
+import InfoBanner from './components/InfoBanner';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div className='App'>
       <StartBanner/>
       <InfoCard/>
+      <InfoBanner/>
     </div>
   );
 }

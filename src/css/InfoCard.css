@@ -5,7 +5,7 @@
 .infoCard{
     position: relative;
     z-index: 1;
-    margin-top: calc(var(--fsTitle) + var(--fsTitle));
+    /* margin-top: calc(var(--fsTitle) + var(--fsTitle)); */
     display: grid;
     grid-template-columns: 30% 70%;
     height: 50%;
@@ -13,6 +13,16 @@
     justify-content: center;
     overflow: hidden;
     padding-inline: 20%;
+
+    height: 50svh;
+    max-height: 500px;
+    mask: linear-gradient(to bottom, white 70%, transparent);
+    padding-top: 35svh;
+    padding-bottom: 40svh;
+    margin-bottom: -10svh;
+    
+    background: linear-gradient(-45deg, rgba(75, 21, 128, 0.5) -20%, var(--td1) 150%);
+
 }
 .infoCard-title-wrapper {
     font-size: calc(var(--fsSubTitle) * 1);
