@@ -36,6 +36,9 @@
     padding-inline: 20px;
     font-size: calc(var(--fsSubTitle) * 0.7);
     transition: .5s;
+    gap: 20px;
+    margin-left: 10px;
+    width: 120%;
 }
 .infoCard-info-wrapper i {
     display: inline-block;
