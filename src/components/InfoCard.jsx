@@ -1,6 +1,6 @@
 import React from 'react'
 import "../css/InfoCard.css"
-import { gitlabIcon, githubIcon, githubIconWhite } from '../images'
+import { gitlabIcon, githubIcon, githubIconWhite, linkedinIcon } from '../images'
 
 function InfoCard() {
   return (
@@ -19,7 +19,7 @@ function InfoCard() {
         <button className='banner-buttons'><a href="https://github.com/GCopat"><img src={githubIcon} alt="Github Logo" id='githubLogo'/></a></button>
 
         
-        <button className='banner-buttons'><a href="/"><img src={githubIcon} alt="Github Logo" id='githubLogo'/></a></button>
+        <button className='banner-buttons'><a href="/"><img src={linkedinIcon} alt="Github Logo" id='githubLogo'/></a></button>
       </div>
     </div>
     </>

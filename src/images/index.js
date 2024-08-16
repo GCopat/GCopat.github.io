@@ -10,6 +10,7 @@ import viteIcon from './icons/Vitejs-logo.svg'
 import gitlabIcon from './icons/gitlab-logo.svg'
 import githubIcon from './icons/github-logo.svg'
 import githubIconWhite from './icons/github-logo-white.svg'
+import linkedinIcon from './icons/linkedin-icon.svg'
 
 export {
     cssIcon,
@@ -23,5 +24,6 @@ export {
     viteIcon,
     gitlabIcon,
     githubIcon,
-    githubIconWhite
+    githubIconWhite,
+    linkedinIcon
 }
