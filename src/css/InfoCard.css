@@ -43,20 +43,22 @@
     position: relative;
     z-index: 2;
     width: 70%;
-    height: 20svh;
-    border: 1px white solid;
+    height: 5em;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0.5svw;
 }
 .banner-buttons {
-    width: 15em;
-    height: 5em;
+    width: 7.5em;
+    height: 2.5em;
     background: var(--td4);
     opacity: 1;
     border-radius: 40px;
     border: none;
-
+    font-size: 1.5em;
+    font-weight: 600;
+    box-shadow: rgba(255, 255, 255, 0.2) 2px 2px 5px;
 }
 .banner-buttons a {
     width: 100%;
@@ -81,6 +83,8 @@
 
 .banner-buttons:not(#first-banner-button) {
     background: var(--td5);
+    color: black;
+    
     
 }
 .minor-bnbuttons-wrap {
@@ -88,7 +92,7 @@
     display: flex;
 }
 .minor-bnbuttons-wrap .banner-buttons{
-    width: 5em;
+    width: 2.5em;
     
 }
 @keyframes slide {
