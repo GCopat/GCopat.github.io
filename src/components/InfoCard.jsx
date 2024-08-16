@@ -17,6 +17,7 @@ function InfoCard() {
       <div className='minor-bnbuttons-wrap'>
         <button className='banner-buttons'><a href="https://git.cardiff.ac.uk/c23127194"><img src={gitlabIcon} alt="Gitlab Logo" id='gitlabLogo'/></a></button>
         <button className='banner-buttons'><a href="https://github.com/GCopat"><img src={githubIcon} alt="Github Logo" id='githubLogo'/></a></button>
+
         
         <button className='banner-buttons'><a href="/"><img src={githubIcon} alt="Github Logo" id='githubLogo'/></a></button>
       </div>
