@@ -2,7 +2,7 @@ import React from 'react'
 import * as icons from '../images';
 import "../css/InfoBanner.css"
 
-function InfoBanner() {
+function TopBanner() {
   return (
     <div className="infoBanner">
       <img src={icons.reactIcon} alt="" className="img-logo"/>
@@ -18,4 +18,4 @@ function InfoBanner() {
   )
 }
 
-export default InfoBanner
+export default TopBanner

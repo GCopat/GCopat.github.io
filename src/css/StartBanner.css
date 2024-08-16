@@ -14,13 +14,7 @@
 
 }
 
-.startBanner {
-    position: relative;
-    z-index: 99;
-    position: fixed;
-    width: inherit;
-    height: inherit;
-}
+
 .animated-intro {
     z-index: 99;
     display: flex;
@@ -160,11 +154,12 @@
 
 @keyframes introGoUp {
     0%   {  transform: translateY(0);                                                            }
-    100% {  transform: translateY( calc(-100% + calc(var(--fsTitle) + var(--fsTitleSpace))));   }
+    /* 100% {  transform: translateY( calc(-100% + calc(var(--fsTitle) + var(--fsTitleSpace))));   } */
+    100% { transform: translateY(-100%);}
 }
 @keyframes introGoDown {
     0% { transform: translateY(0); }
-    100% { transform: translateY(120%);}
+    100% { transform: translateY(100%);}
 }
 @keyframes fadeIn {
     0% { opacity: 0; }

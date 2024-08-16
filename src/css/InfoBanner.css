@@ -1,8 +1,10 @@
 .infoBanner{
-    position: relative;
+    position: absolute;
+    top: 5svh;
     z-index: 2;
-    width: 70%;
-    height: 150px;
+    width: 50%;
+    margin-inline: 10%;
+    height: 10svh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -18,8 +20,7 @@
     overflow: hidden;
 }
 .img-logo {
-    width: 110px;
-    height: 110px;
+    height: 80%;
     aspect-ratio: 1;
     filter: drop-shadow(rgba(0,0,0,0.5) 2px 2px 5px);
 }
@@ -39,3 +40,4 @@
 
     background: linear-gradient(to left,transparent 20%, white, transparent 80%);
 }
+

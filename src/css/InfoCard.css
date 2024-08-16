@@ -5,42 +5,31 @@
 .infoCard{
     position: relative;
     z-index: 1;
-    /* margin-top: calc(var(--fsTitle) + var(--fsTitle)); */
-    display: grid;
-    grid-template-columns: 30% 70%;
-    height: 50%;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
-    padding-inline: 20%;
+    display: flex;
+    grid-template-columns: 100%;
+    height: 75svh;
+    width: 100%;
+    padding-inline: 15%;
 
-    height: 50svh;
-    max-height: 500px;
-    mask: linear-gradient(to bottom, white 70%, transparent);
-    padding-top: 35svh;
-    padding-bottom: 40svh;
-    margin-bottom: -10svh;
+    align-items: flex-end;
+    justify-content: center;
+
+    font-size: 2.2em;
+    line-height: 1.7;
+    text-align: center;
+    padding-bottom: 20svh;
+    margin-bottom: -20svh;
+    
+    mask: linear-gradient(to bottom, white 70%, transparent 100%);
+    /* padding-top: 25svh; */
+    /* padding-bottom: 40svh;
+    margin-bottom: -10svh; */
     
     background: linear-gradient(-45deg, rgba(75, 21, 128, 0.5) -20%, var(--td1) 150%);
 
 }
-.infoCard-title-wrapper {
-    font-size: calc(var(--fsSubTitle) * 1);
-    justify-self: flex-end;
-    transition: .5s;
-}
-.infoCard-info-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-inline: 20px;
-    font-size: calc(var(--fsSubTitle) * 0.7);
-    transition: .5s;
-    gap: 20px;
-    margin-left: 10px;
-    width: 120%;
-}
-.infoCard-info-wrapper i {
+.infoCard i {
     display: inline-block;
     background: red;
     padding-right: 5px;
@@ -49,23 +38,59 @@
     color: transparent;
     font-weight: 700;
 }
-.infoCard::after {
-    overflow: hidden;
-    content:'';
-    top: 0;
-    left: 0;
-    transform:translateX(100%);
+
+.bannerButtons-wrap {
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    height: 20svh;
+    border: 1px white solid;
+    display: flex;
+    justify-content: center;
+    gap: 0.5svw;
+}
+.banner-buttons {
+    width: 15em;
+    height: 5em;
+    background: var(--td4);
+    opacity: 1;
+    border-radius: 40px;
+    border: none;
+
+}
+.banner-buttons a {
     width: 100%;
     height: 100%;
-    
-    position: absolute;
-    z-index: 1;
-    animation: slide calc(var(--introDuration)) calc(var(--introDelay) + 0.4s) var(--introFunction) forwards;
-    opacity: 30%;
-
-    background: linear-gradient(to left,transparent 20%, white, transparent 80%);
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-buttons a img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1;
+}
+#githubLogo {
+    width: 65%;
+    background-color: white;
+    border-radius: 50%;
 }
 
+.banner-buttons:not(#first-banner-button) {
+    background: var(--td5);
+    
+}
+.minor-bnbuttons-wrap {
+    gap: 0.5svw;
+    display: flex;
+}
+.minor-bnbuttons-wrap .banner-buttons{
+    width: 5em;
+    
+}
 @keyframes slide {
 	0% {transform:translateX(-100%);}
 	100% {transform:translateX(100%);}
