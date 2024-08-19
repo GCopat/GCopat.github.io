@@ -1,0 +1,20 @@
+.App {
+    position: relative;
+    height: 100svh;
+    width: 100svw;
+    background: conic-gradient(from 360deg at 110% 10%, #3f0071, #3f0071, #3e026e, #3a0568, #340a5c, #2a0f49, #1d1030, #150f1e, #100d14, #0d0c0e, #0c0c0c, #0c0c0c);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 99;
+}
+.content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

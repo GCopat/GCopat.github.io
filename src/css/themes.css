@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Playwrite+PE:wght@100..400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    font-family: "Sen", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #F7F8FC;
+        --text2: #7000a5;
+        color: var(--text);
+        
+        --td1: rgb(12, 12, 12);
+        --td2: rgb(79, 23, 135);
+        --td3: rgb(251, 101, 37);
+        --td4: rgb(190, 49, 68);
+        --td5: rgb(217, 179, 255);
+    }
+}
+html {
+    color-scheme: dark;
+}
