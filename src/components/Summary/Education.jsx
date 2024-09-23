@@ -33,7 +33,7 @@ const DEGREES = [DEGREE_1, DEGREE_2, DEGREE_3]
 function Education() {
     return (
         <div id='Education'>
-            <h2 className='summary-title pizzaz teko-h2'>Education</h2>
+            <h2 className='summary-title pizzaz teko-h2 '>Education</h2>
             {DEGREES.map((degree, index) => {
                 return (
                     <div className="degree" key={index}>

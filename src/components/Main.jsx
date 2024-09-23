@@ -1,10 +1,11 @@
 import React from 'react'
-import { Title, Summary } from './'
+import { Title, Summary, AboutMe } from './'
 
 function Main() {
   return (
     <>
         <Title></Title>
+        <AboutMe/>
         <Summary/>
     </>
   )

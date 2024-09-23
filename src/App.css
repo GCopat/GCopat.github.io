@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Teko:wght@300..700&display=swap');
 :root {
-    --blue: rgb(50, 149, 255);
-    --background: #fffef5;
+    --blue: #3295ff;
+    /* --background: whitesmoke; */
+    --background: #daeaf7;
 }
 * {
     margin: 0;
@@ -50,7 +51,6 @@
 }
 
 #Summary {
-    border: var(--blue) 2px solid;
     width: 70%;
     min-height: 40%;
     display: flex;
@@ -80,4 +80,25 @@
 .degree-desc, .degree-title {
     padding: 0;
     margin: 0;
+}
+
+i, .pizzaz {
+    display: inline-block;
+    background: red;
+    padding-right: 5px;
+    background: linear-gradient(90deg, #0855b1, #0e5cb6, #1463bb, #1b6abe, #2371c2, #2b78c5, #337fc7, #4085c5);
+    background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    /* filter: brightness(90%); */
+}
+
+#AboutMe {
+    font-size: 2.5em;
+    width: 50%;
+    text-align: center;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }
