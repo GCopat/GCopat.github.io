@@ -1,8 +1,6 @@
 import './App.css';
-import StartBanner from './components/StartBanner';
-import InfoCard from './components/InfoCard';
-import TopBanner from './components/InfoBanner';
-import Timeline from './components/Timeline';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Main from './components/Main';
 
 function App() {
   const styles = {
@@ -13,14 +11,18 @@ function App() {
   }
 
   return (
-    <div className='App'>
-      <StartBanner/>
-      <div className='content'>
-        <InfoCard/>
-        <TopBanner/>
-        <Timeline/>
+    <Router>
+      <div className='App'>
+        <Routes>
+
+          <Route path="/" element={ 
+              <Main/>
+            }
+          />
+
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
